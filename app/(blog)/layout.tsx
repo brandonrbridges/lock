@@ -16,12 +16,12 @@ const RootLayout = async ({children}: {children: React.ReactNode}) => {
 	return (
 		<html lang='en' className={workSans.className}>
 			<head />
-			<body className='bg-white text-gray-800 min-h-screen'>
+			<body className='min-h-screen text-gray-800 bg-white'>
 				<Header siteSettings={siteSettings} />
 				<MaxWidthWrapper className='flex flex-col pt-4 pb-8' type='main'>
 					{children}
 				</MaxWidthWrapper>
-				<Footer socialFields={siteSettings.socialFields}/>
+				{/* <Footer socialFields={siteSettings.socialFields}/> */}
 			</body>
 		</html>
 	);

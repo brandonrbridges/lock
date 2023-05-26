@@ -1,9 +1,9 @@
 import type {Metadata} from 'next';
-import {previewData} from 'next/headers';
+// import {previewData} from 'next/headers';
 import {pageQuery, allPagesSlug} from '~/lib/queries';
 import {sanityClient, urlForImage} from '~/lib/sanity/client';
 import {PageLayout} from '~/components/layout';
-import {PagePreview, PreviewSuspense} from '~/components/previews';
+// import {PagePreview, PreviewSuspense} from '~/components/previews';
 import type {Page} from '~/models/page';
 
 export const generateStaticParams = async () => {
@@ -49,13 +49,13 @@ const SlugRoute = async ({params}: {params: {slug: string}}) => {
 		slug: params.slug
 	});
 
-	if (previewData()) {
-		return (
-			<PreviewSuspense fallback={<PageLayout page={page} />}>
-				<PagePreview query={pageQuery} variables={{slug: params.slug}} />
-			</PreviewSuspense>
-		);
-	}
+	// if (previewData()) {
+	// 	return (
+	// 		<PreviewSuspense fallback={<PageLayout page={page} />}>
+	// 			<PagePreview query={pageQuery} variables={{slug: params.slug}} />
+	// 		</PreviewSuspense>
+	// 	);
+	// }
 
 	return <PageLayout page={page} />;
 };

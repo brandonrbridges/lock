@@ -77,11 +77,10 @@
 		"extends": [
 			"next",
 			"next/core-web-vitals",
-			"plugin:@typescript-eslint/recommended",
-			"prettier"
+			"plugin:@typescript-eslint/recommended"
 		],
 		"rules": {
-			"semi": "error",
+			"semi": "off",
 			"comma-dangle": "off",
 			"no-multiple-empty-lines": "error",
 			"no-multi-spaces": "error",

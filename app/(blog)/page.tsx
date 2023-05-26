@@ -1,9 +1,9 @@
 import type {Metadata} from 'next';
-import {previewData} from 'next/headers';
+// import {previewData} from 'next/headers';
 import {pageWithPostsQuery} from '~/lib/queries';
 import {sanityClient, urlForImage} from '~/lib/sanity/client';
 import {IndexPageLayout} from '~/components/layout';
-import {IndexPagePreview, PreviewSuspense} from '~/components/previews';
+// import {IndexPagePreview, PreviewSuspense} from '~/components/previews';
 import type {Page} from '~/models/page';
 import type {Post} from '~/models/post';
 
@@ -48,13 +48,13 @@ const IndexRoute = async () => {
 		limit: 2
 	});
 
-	if (previewData()) {
-		return (
-			<PreviewSuspense fallback={<IndexPageLayout page={page} posts={posts} />}>
-				<IndexPagePreview query={pageWithPostsQuery} variables={{slug: 'frontpage', limit: 2}} />
-			</PreviewSuspense>
-		);
-	}
+	// if (previewData()) {
+	// 	return (
+	// 		<PreviewSuspense fallback={<IndexPageLayout page={page} posts={posts} />}>
+	// 			<IndexPagePreview query={pageWithPostsQuery} variables={{slug: 'frontpage', limit: 2}} />
+	// 		</PreviewSuspense>
+	// 	);
+	// }
 
 	return <IndexPageLayout page={page} posts={posts} />;
 };
