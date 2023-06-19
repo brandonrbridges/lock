@@ -31,7 +31,7 @@
 		"get-youtube-id": "^1.0.1",
 		"next": "^13.2.4",
 		"next-sanity": "^4.1.5",
-		"next-sanity-image": "^6.0.0",
+		"next-sanity-image": "^6.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.8.0",
